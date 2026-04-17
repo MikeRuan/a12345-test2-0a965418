@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Hobby Page 🌟</title>
+<title>My Hobby Page 🌟 Grade 5</title>
 <style>
-  /* Fun blue theme for kids */
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #0077cc 0%, #00c6ff 100%);
+    background: linear-gradient(135deg, #ff6fd8 0%, #3813c2 50%, #00c6ff 100%);
     min-height: 100vh;
     padding: 16px;
   }
@@ -18,34 +17,34 @@
   h1 {
     text-align: center;
     color: #fff;
-    font-size: 2rem;
-    text-shadow: 2px 2px 6px rgba(0,0,60,0.3);
-    margin-bottom: 8px;
+    font-size: 2.2rem;
+    text-shadow: 3px 3px 8px rgba(0,0,60,0.4);
+    margin-bottom: 6px;
   }
 
   .subtitle {
     text-align: center;
-    color: #d0f0ff;
-    font-size: 1.1rem;
+    color: #ffe8ff;
+    font-size: 1.15rem;
     margin-bottom: 20px;
+    font-weight: bold;
   }
 
-  /* Card style */
   .card {
     background: #fff;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 6px 20px rgba(0,0,80,0.2);
+    border-radius: 24px;
+    padding: 22px;
+    margin-bottom: 22px;
+    box-shadow: 0 8px 24px rgba(0,0,80,0.25);
   }
 
   .card h2 {
-    color: #0077cc;
-    font-size: 1.4rem;
-    margin-bottom: 12px;
+    font-size: 1.5rem;
+    margin-bottom: 14px;
+    color: #3813c2;
   }
 
-  /* Hobby picker section */
+  /* ── HOBBY PICKER ── */
   .hobby-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -54,44 +53,44 @@
   }
 
   .hobby-btn {
-    background: #e8f4ff;
-    border: 3px solid #b3d8f8;
-    border-radius: 14px;
-    padding: 12px 6px;
-    font-size: 1rem;
+    background: linear-gradient(135deg, #f0e6ff, #e0f0ff);
+    border: 3px solid #c8aaff;
+    border-radius: 16px;
+    padding: 14px 6px;
+    font-size: 1.05rem;
     cursor: pointer;
     text-align: center;
     transition: all 0.2s;
-    color: #004a99;
+    color: #3813c2;
     font-weight: bold;
+    line-height: 1.4;
   }
 
-  .hobby-btn:hover { background: #b3d8f8; transform: scale(1.05); }
+  .hobby-btn:hover { background: #c8aaff; transform: scale(1.05); }
   .hobby-btn.selected {
-    background: #0077cc;
+    background: linear-gradient(135deg, #ff6fd8, #3813c2);
     color: #fff;
-    border-color: #004a99;
+    border-color: #3813c2;
     transform: scale(1.08);
-    box-shadow: 0 4px 12px rgba(0,119,204,0.5);
+    box-shadow: 0 4px 14px rgba(56,19,194,0.5);
   }
 
-  /* My hobby display */
   #hobbyDisplay {
-    background: linear-gradient(135deg, #e8f4ff, #d0ecff);
-    border-radius: 16px;
-    padding: 16px;
+    background: linear-gradient(135deg, #fff0fb, #e8eaff);
+    border-radius: 18px;
+    padding: 18px;
     text-align: center;
-    border: 2px dashed #0077cc;
+    border: 3px dashed #ff6fd8;
     display: none;
+    animation: popIn 0.4s ease;
   }
 
-  #hobbyDisplay .big-emoji { font-size: 3.5rem; }
-  #hobbyDisplay .hobby-name { font-size: 1.5rem; font-weight: bold; color: #004a99; margin: 6px 0; }
-  #hobbyDisplay .hobby-desc { font-size: 1rem; color: #335; line-height: 1.5; }
+  #hobbyDisplay .big-emoji { font-size: 4rem; }
+  #hobbyDisplay .hobby-name { font-size: 1.7rem; font-weight: bold; color: #3813c2; margin: 8px 0 4px; }
+  #hobbyDisplay .hobby-desc { font-size: 1.05rem; color: #334; line-height: 1.6; }
 
-  /* Fun fact box */
   #factBox {
-    background: #fff9e6;
+    background: #fffbe6;
     border-left: 5px solid #ffcc00;
     border-radius: 12px;
     padding: 12px 16px;
@@ -99,83 +98,157 @@
     font-size: 1rem;
     color: #554400;
     display: none;
-    line-height: 1.5;
+    line-height: 1.6;
+    text-align: left;
   }
 
-  /* My Hobby Journal */
+  /* ── HOBBY QUIZ ── */
+  .quiz-intro {
+    font-size: 1.05rem;
+    color: #334;
+    margin-bottom: 14px;
+    line-height: 1.6;
+  }
+
+  .quiz-question {
+    background: linear-gradient(135deg, #f0e6ff, #e8f8ff);
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 12px;
+    border: 2px solid #c8aaff;
+  }
+
+  .quiz-q-text {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #3813c2;
+    margin-bottom: 10px;
+  }
+
+  .quiz-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .quiz-opt {
+    background: #fff;
+    border: 2px solid #c8aaff;
+    border-radius: 12px;
+    padding: 10px 8px;
+    font-size: 0.97rem;
+    cursor: pointer;
+    color: #3813c2;
+    font-weight: bold;
+    transition: all 0.18s;
+    text-align: center;
+  }
+
+  .quiz-opt:hover { background: #e8d8ff; transform: scale(1.03); }
+  .quiz-opt.correct { background: #b6ffcc; border-color: #00bb55; color: #005522; }
+  .quiz-opt.wrong   { background: #ffd6d6; border-color: #ff4444; color: #880000; }
+  .quiz-opt.reveal  { background: #b6ffcc; border-color: #00bb55; color: #005522; }
+  .quiz-opt:disabled { cursor: default; transform: none; }
+
+  .quiz-feedback {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 8px;
+    min-height: 24px;
+    text-align: center;
+  }
+
+  .quiz-score-box {
+    background: linear-gradient(135deg, #ff6fd8, #3813c2);
+    color: #fff;
+    border-radius: 18px;
+    padding: 18px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 14px;
+    display: none;
+    animation: popIn 0.5s ease;
+  }
+
+  .quiz-score-box .score-num {
+    font-size: 2.5rem;
+    display: block;
+    margin: 6px 0;
+  }
+
+  /* ── JOURNAL ── */
   .journal-section textarea {
     width: 100%;
     height: 100px;
-    border-radius: 12px;
-    border: 2px solid #b3d8f8;
+    border-radius: 14px;
+    border: 2px solid #c8aaff;
     padding: 10px;
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-family: inherit;
     color: #223;
     resize: none;
     outline: none;
   }
 
-  .journal-section textarea:focus { border-color: #0077cc; }
+  .journal-section textarea:focus { border-color: #3813c2; }
 
   .action-btn {
-    background: linear-gradient(135deg, #0077cc, #00aaff);
+    background: linear-gradient(135deg, #ff6fd8, #3813c2);
     color: #fff;
     border: none;
-    border-radius: 14px;
-    padding: 12px 24px;
-    font-size: 1.1rem;
+    border-radius: 16px;
+    padding: 13px 24px;
+    font-size: 1.15rem;
     font-weight: bold;
     cursor: pointer;
     margin-top: 10px;
     width: 100%;
     transition: transform 0.15s, box-shadow 0.15s;
-    box-shadow: 0 4px 10px rgba(0,100,200,0.3);
+    box-shadow: 0 4px 12px rgba(56,19,194,0.35);
   }
 
-  .action-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,100,200,0.4); }
+  .action-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(56,19,194,0.45); }
   .action-btn:active { transform: scale(0.97); }
 
-  #journalEntries { margin-top: 14px; }
+  .action-btn.secondary {
+    background: linear-gradient(135deg, #00c6ff, #0077cc);
+    margin-top: 8px;
+  }
 
   .entry-card {
-    background: #f0f8ff;
-    border-radius: 12px;
-    padding: 12px;
+    background: #f5f0ff;
+    border-radius: 14px;
+    padding: 12px 14px;
     margin-bottom: 10px;
-    border-left: 4px solid #0077cc;
-    font-size: 0.97rem;
+    border-left: 5px solid #ff6fd8;
+    font-size: 1rem;
     color: #223;
-    line-height: 1.5;
-    position: relative;
+    line-height: 1.6;
   }
 
   .entry-stamp {
-    font-size: 0.8rem;
-    color: #6699cc;
+    font-size: 0.85rem;
+    color: #7755bb;
     margin-bottom: 4px;
+    font-weight: bold;
   }
 
-  /* Progress tracker */
+  /* ── PROGRESS ── */
   .goal-row {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     flex-wrap: wrap;
   }
 
-  .goal-label {
-    font-size: 1rem;
-    color: #223;
-    flex: 1;
-    min-width: 120px;
-  }
+  .goal-label { font-size: 1.05rem; color: #223; flex: 1; min-width: 130px; font-weight: bold; }
 
   .stars-row { display: flex; gap: 6px; }
 
   .star-btn {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     background: none;
     border: none;
     cursor: pointer;
@@ -184,35 +257,33 @@
     padding: 0;
   }
 
-  .star-btn:hover { transform: scale(1.3); }
+  .star-btn:hover { transform: scale(1.35); }
 
-  /* Badge section */
   #badgeArea {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 12px;
   }
 
   .badge {
     background: linear-gradient(135deg, #ffe066, #ffaa00);
     border-radius: 50px;
-    padding: 8px 16px;
-    font-size: 0.95rem;
+    padding: 9px 18px;
+    font-size: 1rem;
     font-weight: bold;
     color: #5a3300;
-    box-shadow: 0 3px 8px rgba(200,120,0,0.3);
+    box-shadow: 0 3px 10px rgba(200,120,0,0.35);
     animation: popIn 0.4s ease;
   }
 
   @keyframes popIn {
-    0% { transform: scale(0); opacity: 0; }
-    80% { transform: scale(1.1); }
+    0%   { transform: scale(0); opacity: 0; }
+    80%  { transform: scale(1.12); }
     100% { transform: scale(1); opacity: 1; }
   }
 
-  /* Confetti celebration */
   #confetti { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 999; }
 
   .conf-piece {
@@ -226,12 +297,18 @@
   @keyframes fall {
     to { transform: translateY(110vh) rotate(720deg); opacity: 0; }
   }
+
+  /* ── QUIZ RESET BTN ── */
+  #quizResetBtn {
+    display: none;
+    margin-top: 10px;
+  }
 </style>
 </head>
 <body>
 
-<h1>🎨 My Hobby Page</h1>
-<p class="subtitle">Discover what you love to do!</p>
+<h1>🌟 My Hobby Page</h1>
+<p class="subtitle">Grade 5 — Find what makes you shine! ✨</p>
 
 <!-- HOBBY PICKER -->
 <div class="card">
@@ -253,6 +330,19 @@
     <div class="hobby-desc" id="hobbyDesc"></div>
     <div id="factBox"></div>
   </div>
+</div>
+
+<!-- HOBBY QUIZ (main interactive feature) -->
+<div class="card">
+  <h2>🧠 Hobby Quiz Challenge!</h2>
+  <p class="quiz-intro">Test what you know about different hobbies! Answer all 5 questions and earn a score. 🏅</p>
+  <div id="quizArea"></div>
+  <div class="quiz-score-box" id="quizScoreBox">
+    🎉 Quiz Complete!
+    <span class="score-num" id="quizScoreNum"></span>
+    <span id="quizScoreMsg"></span>
+  </div>
+  <button class="action-btn secondary" id="quizResetBtn">🔄 Try Again</button>
 </div>
 
 <!-- JOURNAL -->
@@ -294,50 +384,179 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // ── Hobby data ──
   var hobbies = {
-    drawing: { emoji:'🎨', name:'Drawing', desc:'Express yourself with colors and shapes! Drawing helps you see the world in new ways.', fact:'Fun Fact: Leonardo da Vinci started drawing as a kid just like you!' },
-    reading: { emoji:'📚', name:'Reading', desc:'Open a book and travel anywhere! Reading builds your vocabulary and imagination.', fact:'Fun Fact: The average book reader knows 50% more words than non-readers.' },
-    gaming: { emoji:'🎮', name:'Gaming', desc:'Games sharpen your brain, reflexes, and problem-solving skills!', fact:'Fun Fact: Playing video games can improve hand-eye coordination!' },
-    cooking: { emoji:'🍳', name:'Cooking', desc:'Create delicious food from scratch. Cooking is science and art combined!', fact:'Fun Fact: There are over 2 million different recipes around the world!' },
-    sports: { emoji:'⚽', name:'Sports', desc:'Stay active and have fun with your friends. Sports build teamwork and strength!', fact:'Fun Fact: Playing sports releases "happy chemicals" in your brain!' },
-    music: { emoji:'🎵', name:'Music', desc:'Playing or listening to music makes your brain stronger and more creative!', fact:'Fun Fact: Learning an instrument grows new connections in your brain!' },
-    dancing: { emoji:'💃', name:'Dancing', desc:'Move your body to the beat! Dancing is great exercise and super fun.', fact:'Fun Fact: Dancing is one of the oldest art forms — over 9,000 years old!' },
-    coding: { emoji:'💻', name:'Coding', desc:'Build games, apps, and websites. Coding is like a superpower for the future!', fact:'Fun Fact: There are over 700 different coding languages in the world!' },
-    nature: { emoji:'🌿', name:'Nature', desc:'Explore the outdoors, grow plants, or watch animals. Nature is amazing!', fact:'Fun Fact: There are about 8.7 million different species on Earth!' }
+    drawing:  { emoji:'🎨', name:'Drawing',  desc:'Express yourself with colors and shapes! Drawing helps you see the world in new ways.', fact:'Fun Fact: Leonardo da Vinci started drawing as a kid just like you!' },
+    reading:  { emoji:'📚', name:'Reading',  desc:'Open a book and travel anywhere! Reading builds your vocabulary and imagination.', fact:'Fun Fact: The average reader knows 50% more words than non-readers!' },
+    gaming:   { emoji:'🎮', name:'Gaming',   desc:'Games sharpen your brain, reflexes, and problem-solving skills!', fact:'Fun Fact: Playing video games can improve hand-eye coordination!' },
+    cooking:  { emoji:'🍳', name:'Cooking',  desc:'Create delicious food from scratch. Cooking is science and art combined!', fact:'Fun Fact: There are over 2 million different recipes around the world!' },
+    sports:   { emoji:'⚽', name:'Sports',   desc:'Stay active and have fun with your friends. Sports build teamwork and strength!', fact:'Fun Fact: Playing sports releases "happy chemicals" in your brain!' },
+    music:    { emoji:'🎵', name:'Music',    desc:'Playing or listening to music makes your brain stronger and more creative!', fact:'Fun Fact: Learning an instrument grows new connections in your brain!' },
+    dancing:  { emoji:'💃', name:'Dancing',  desc:'Move your body to the beat! Dancing is great exercise and super fun.', fact:'Fun Fact: Dancing is one of the oldest art forms — over 9,000 years old!' },
+    coding:   { emoji:'💻', name:'Coding',   desc:'Build games, apps, and websites. Coding is like a superpower for the future!', fact:'Fun Fact: There are over 700 different coding languages in the world!' },
+    nature:   { emoji:'🌿', name:'Nature',   desc:'Explore the outdoors, grow plants, or watch animals. Nature is amazing!', fact:'Fun Fact: There are about 8.7 million different species on Earth!' }
   };
 
   var selectedHobby = null;
-  var starScores = [0, 0, 0, 0]; // 0-5 stars per goal
+  var starScores = [0, 0, 0, 0];
   var entryCount = 0;
+  var earnedBadges = [];
+
+  // ── Quiz data ──
+  var allQuestions = [
+    { q: 'Which hobby uses a paintbrush or pencil to make pictures?', options: ['🎵 Music','🎨 Drawing','⚽ Sports','💻 Coding'], answer: 1 },
+    { q: 'Which hobby helps you learn stories and new words from books?', options: ['📚 Reading','🍳 Cooking','💃 Dancing','🌿 Nature'], answer: 0 },
+    { q: 'Which hobby involves mixing ingredients to make food?', options: ['🎮 Gaming','🎨 Drawing','🍳 Cooking','📚 Reading'], answer: 2 },
+    { q: 'Which hobby means writing instructions for a computer?', options: ['💃 Dancing','⚽ Sports','🌿 Nature','💻 Coding'], answer: 3 },
+    { q: 'Which hobby involves kicking a ball or swimming?', options: ['🎵 Music','⚽ Sports','📚 Reading','🎨 Drawing'], answer: 1 },
+    { q: 'Which hobby uses notes and rhythm to make sound?', options: ['🌿 Nature','🍳 Cooking','🎵 Music','🎮 Gaming'], answer: 2 },
+    { q: 'Which hobby means exploring plants, trees and animals outside?', options: ['🌿 Nature','💻 Coding','📚 Reading','💃 Dancing'], answer: 0 },
+    { q: 'Which hobby involves moving your body to a beat?', options: ['🎮 Gaming','💃 Dancing','🍳 Cooking','🎵 Music'], answer: 1 }
+  ];
+
+  var quizQuestions = [];
+  var quizAnswered = 0;
+  var quizScore = 0;
+  var QUIZ_COUNT = 5;
+
+  // ── Shuffle helper ──
+  function shuffle(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+    }
+    return a;
+  }
+
+  // ── Build quiz ──
+  function buildQuiz() {
+    quizScore = 0;
+    quizAnswered = 0;
+    quizQuestions = shuffle(allQuestions).slice(0, QUIZ_COUNT);
+
+    var area = document.getElementById('quizArea');
+    var scoreBox = document.getElementById('quizScoreBox');
+    var resetBtn = document.getElementById('quizResetBtn');
+    area.innerHTML = '';
+    scoreBox.style.display = 'none';
+    resetBtn.style.display = 'none';
+
+    quizQuestions.forEach(function(qObj, idx) {
+      var qDiv = document.createElement('div');
+      qDiv.className = 'quiz-question';
+      qDiv.setAttribute('data-idx', idx);
+
+      var qText = document.createElement('div');
+      qText.className = 'quiz-q-text';
+      qText.textContent = (idx + 1) + '. ' + qObj.q;
+      qDiv.appendChild(qText);
+
+      var optGrid = document.createElement('div');
+      optGrid.className = 'quiz-options';
+
+      qObj.options.forEach(function(optText, optIdx) {
+        var btn = document.createElement('button');
+        btn.className = 'quiz-opt';
+        btn.textContent = optText;
+        btn.setAttribute('data-opt', optIdx);
+
+        btn.addEventListener('click', function() {
+          // Disable all options for this question
+          var allOpts = optGrid.querySelectorAll('.quiz-opt');
+          allOpts.forEach(function(b) { b.disabled = true; });
+
+          var feedback = qDiv.querySelector('.quiz-feedback');
+          if (optIdx === qObj.answer) {
+            btn.classList.add('correct');
+            feedback.textContent = '✅ Correct! Well done!';
+            feedback.style.color = '#007733';
+            quizScore++;
+          } else {
+            btn.classList.add('wrong');
+            // Reveal correct answer
+            allOpts[qObj.answer].classList.add('reveal');
+            feedback.textContent = '❌ Not quite! The correct answer is highlighted.';
+            feedback.style.color = '#cc0000';
+          }
+
+          quizAnswered++;
+          if (quizAnswered === QUIZ_COUNT) {
+            setTimeout(showQuizResult, 700);
+          }
+        });
+
+        optGrid.appendChild(btn);
+      });
+
+      qDiv.appendChild(optGrid);
+
+      var feedback = document.createElement('div');
+      feedback.className = 'quiz-feedback';
+      qDiv.appendChild(feedback);
+
+      area.appendChild(qDiv);
+    });
+  }
+
+  function showQuizResult() {
+    var scoreBox = document.getElementById('quizScoreBox');
+    var scoreNum = document.getElementById('quizScoreNum');
+    var scoreMsg = document.getElementById('quizScoreMsg');
+    var resetBtn = document.getElementById('quizResetBtn');
+
+    scoreNum.textContent = quizScore + ' / ' + QUIZ_COUNT;
+
+    var msg = '';
+    if (quizScore === QUIZ_COUNT) msg = '🏆 Perfect score! You are a Hobby Expert!';
+    else if (quizScore >= 4)       msg = '🌟 Amazing job! Almost perfect!';
+    else if (quizScore >= 3)       msg = '👍 Good work! Keep learning!';
+    else                           msg = '💪 Keep trying — you\'ll get it!';
+
+    scoreMsg.textContent = msg;
+    scoreBox.style.display = 'block';
+    resetBtn.style.display = 'block';
+    scoreBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+    if (quizScore >= 4) launchConfetti();
+
+    // Award quiz badge
+    if (quizScore === QUIZ_COUNT && earnedBadges.indexOf('quiz_perfect') === -1) {
+      earnedBadges.push('quiz_perfect');
+      addBadge('🧠 Quiz Master!');
+      launchConfetti();
+    } else if (quizScore >= 3 && earnedBadges.indexOf('quiz_good') === -1) {
+      earnedBadges.push('quiz_good');
+      addBadge('📖 Hobby Scholar!');
+    }
+  }
+
+  buildQuiz();
+
+  // ── Quiz reset button ──
+  var quizResetBtn = document.getElementById('quizResetBtn');
+  if (quizResetBtn) quizResetBtn.addEventListener('click', function() {
+    buildQuiz();
+    document.getElementById('quizArea').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
 
   // ── Hobby picker buttons ──
   var hobbyBtns = document.querySelectorAll('.hobby-btn');
   hobbyBtns.forEach(function(btn) {
     btn.addEventListener('click', function() {
       var key = btn.getAttribute('data-hobby');
-
-      // Deselect all
       hobbyBtns.forEach(function(b) { b.classList.remove('selected'); });
       btn.classList.add('selected');
-
       selectedHobby = key;
       var h = hobbies[key];
 
-      // Show display box
       var display = document.getElementById('hobbyDisplay');
-      var emojiEl = document.getElementById('hobbyEmoji');
-      var nameEl = document.getElementById('hobbyName');
-      var descEl = document.getElementById('hobbyDesc');
+      document.getElementById('hobbyEmoji').textContent = h.emoji;
+      document.getElementById('hobbyName').textContent = h.name;
+      document.getElementById('hobbyDesc').textContent = h.desc;
       var factEl = document.getElementById('factBox');
-
-      emojiEl.textContent = h.emoji;
-      nameEl.textContent = h.name;
-      descEl.textContent = h.desc;
       factEl.textContent = '💡 ' + h.fact;
 
       display.style.display = 'block';
       factEl.style.display = 'block';
-
-      // Scroll to it
       display.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     });
   });
@@ -349,10 +568,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var text = input.value.trim();
     if (!text) {
       input.placeholder = '✏️ Please write something first!';
-      input.style.borderColor = '#ff6666';
+      input.style.borderColor = '#ff4444';
       setTimeout(function() {
         input.placeholder = 'Write about your hobby today! What did you do? How did it feel? 😊';
-        input.style.borderColor = '#b3d8f8';
+        input.style.borderColor = '#c8aaff';
       }, 2000);
       return;
     }
@@ -362,26 +581,26 @@ document.addEventListener('DOMContentLoaded', function() {
     var now = new Date();
     var dateStr = now.toLocaleDateString('en-US', { weekday:'short', month:'short', day:'numeric' });
     var timeStr = now.toLocaleTimeString('en-US', { hour:'2-digit', minute:'2-digit' });
-
     var hobbyTag = selectedHobby ? ' • ' + hobbies[selectedHobby].emoji + ' ' + hobbies[selectedHobby].name : '';
 
     var div = document.createElement('div');
     div.className = 'entry-card';
     div.innerHTML = '<div class="entry-stamp">📅 ' + dateStr + ' at ' + timeStr + hobbyTag + '</div>' + text;
-
-    // Add at top
     container.insertBefore(div, container.firstChild);
     input.value = '';
 
-    // Celebrate 1st entry
     if (entryCount === 1) launchConfetti();
+    if (entryCount >= 3 && earnedBadges.indexOf('journal_star') === -1) {
+      earnedBadges.push('journal_star');
+      addBadge('✍️ Journal Star!');
+      launchConfetti();
+    }
   });
 
-  // ── Star rating system ──
+  // ── Star rating ──
   var starRows = document.querySelectorAll('.stars-row');
   starRows.forEach(function(row) {
     var goalIndex = parseInt(row.getAttribute('data-goal'));
-    // Build 5 stars
     for (var s = 1; s <= 5; s++) {
       var star = document.createElement('button');
       star.className = 'star-btn';
@@ -402,26 +621,21 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   function updateStarDisplay(row, count) {
-    var stars = row.querySelectorAll('.star-btn');
-    stars.forEach(function(s, i) {
+    row.querySelectorAll('.star-btn').forEach(function(s, i) {
       s.textContent = i < count ? '⭐' : '☆';
     });
   }
 
-  // ── Badge system ──
-  var earnedBadges = [];
-
   function checkBadges() {
     var total = starScores.reduce(function(a, b) { return a + b; }, 0);
-    var badgeDefs = [
-      { id: 'first_star', label: '🌟 First Star!', condition: total >= 1 },
-      { id: 'halfway', label: '🔥 Halfway Hero!', condition: total >= 10 },
-      { id: 'all_goals', label: '🏆 All Goals Done!', condition: starScores.filter(function(v){ return v >= 1; }).length === 4 },
-      { id: 'perfect', label: '💎 Perfect Week!', condition: total === 20 }
+    var defs = [
+      { id:'first_star', label:'🌟 First Star!',     cond: total >= 1 },
+      { id:'halfway',    label:'🔥 Halfway Hero!',   cond: total >= 10 },
+      { id:'all_goals',  label:'🏆 All Goals Done!', cond: starScores.filter(function(v){ return v >= 1; }).length === 4 },
+      { id:'perfect',    label:'💎 Perfect Week!',   cond: total === 20 }
     ];
-
-    badgeDefs.forEach(function(b) {
-      if (b.condition && earnedBadges.indexOf(b.id) === -1) {
+    defs.forEach(function(b) {
+      if (b.cond && earnedBadges.indexOf(b.id) === -1) {
         earnedBadges.push(b.id);
         addBadge(b.label);
         launchConfetti();
@@ -430,33 +644,32 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function addBadge(label) {
-    var area = document.getElementById('badgeArea');
     var badge = document.createElement('div');
     badge.className = 'badge';
     badge.textContent = label;
-    area.appendChild(badge);
+    document.getElementById('badgeArea').appendChild(badge);
   }
 
-  // ── Confetti animation ──
+  // ── Confetti ──
   function launchConfetti() {
     var container = document.getElementById('confetti');
-    var colors = ['#00aaff','#ffcc00','#ff6699','#00ff99','#ff8800','#cc00ff'];
-    for (var i = 0; i < 40; i++) {
+    var colors = ['#ff6fd8','#3813c2','#00c6ff','#ffcc00','#ff6699','#00ff99','#ff8800'];
+    for (var i = 0; i < 50; i++) {
       (function() {
         var piece = document.createElement('div');
         piece.className = 'conf-piece';
         piece.style.left = Math.random() * 100 + 'vw';
         piece.style.background = colors[Math.floor(Math.random() * colors.length)];
         piece.style.animationDuration = (1.2 + Math.random() * 1.2) + 's';
-        piece.style.animationDelay = (Math.random() * 0.5) + 's';
+        piece.style.animationDelay = (Math.random() * 0.6) + 's';
         piece.style.width = piece.style.height = (8 + Math.random() * 8) + 'px';
         container.appendChild(piece);
-        setTimeout(function() { piece.remove(); }, 2500);
+        setTimeout(function() { piece.remove(); }, 2800);
       })();
     }
   }
 
-  // BUTTON CHECKLIST: hobby-btn (9 buttons) ✓  #saveEntryBtn ✓  star-btn (dynamic) ✓
+  // BUTTON CHECKLIST: .hobby-btn x9 ✓  #saveEntryBtn ✓  #quizResetBtn ✓  .quiz-opt (dynamic) ✓  .star-btn (dynamic) ✓
 });
 </script>
 </body>
